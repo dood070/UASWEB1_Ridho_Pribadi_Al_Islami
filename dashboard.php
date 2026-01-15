@@ -99,7 +99,10 @@ padding: 20px;
 <div class="profile-btn" onclick="toggleMenu()">Profile ▾</div>
 <div class="dropdown-content" id="profileMenu">
 <a href="dashboard.php?page=profile">My Profile</a>
-<a href="#">Logout</a>
+<a href="logout.php" onclick="return confirm('Yakin ingin logout?')">
+    Logout
+</a>
+
 </div>
 </div>
 </div>

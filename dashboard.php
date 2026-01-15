@@ -92,7 +92,7 @@ padding: 20px;
 <a href="dashboard.php?page=listproducts">List Produk</a>
 <a href="dashboard.php?page=listcustomer">Customer</a>
 <a href="dashboard.php?page=transaksi">Transaksi</a>
-<a href="#">Laporan</a>
+<a href="dashboard.php?page=laporan">Laporan</a>
 </div>
 <div class="header">
 <div class="dropdown">

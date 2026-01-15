@@ -57,10 +57,10 @@ th {
             <th>No</th>
             <th>Kode</th>
             <th>Nama Pelanggan</th>
-            <th>Kategori</th>
             <th>alamat</th>
             <th>no_hp</th>
             <th>email</th>
+            <th>Aksi</th>
         </tr>
 
         <?php

@@ -90,9 +90,8 @@ padding: 20px;
 <h2>Dashboard</h2>
 <a href="dashboard.php">Home</a>
 <a href="dashboard.php?page=listproducts">List Produk</a>
-
 <a href="dashboard.php?page=listcustomer">Customer</a>
-<a href="#">Transaksi</a>
+<a href="dashboard.php?page=transaksi">Transaksi</a>
 <a href="#">Laporan</a>
 </div>
 <div class="header">

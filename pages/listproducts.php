@@ -49,7 +49,7 @@ th {
 <div class="card">
     <div class="card-header">
         <h3>List Produk</h3>
-        <a href="dashboard.php?page=tambah" class="btn btn-tambah">+ Tambah Produk</a>
+        <a href="dashboard.php?page=tambah-product" class="btn btn-tambah">+ Tambah Produk</a>
     </div>
 
     <table>
@@ -77,8 +77,8 @@ th {
             <td><?= $row['stok']; ?></td>
             <td><?= $row['satuan']; ?></td>
             <td>
-                <a href="dashboard.php?page=edit&id=<?= $row['id_barang']; ?>" class="btn btn-edit">Edit</a>
-                <a href="dashboard.php?page=hapus&id=<?= $row['id_barang']; ?>"
+                <a href="dashboard.php?page=edit-product&id=<?= $row['id_barang']; ?>" class="btn btn-edit">Edit</a>
+                <a href="dashboard.php?page=hapus-product&id=<?= $row['id_barang']; ?>"
                    class="btn btn-hapus"
                    onclick="return confirm('Yakin hapus data?')">
                    Hapus

@@ -1,0 +1,88 @@
+<?php
+require_once __DIR__ . "/../koneksi.php";
+$data = mysqli_query($conn, "SELECT * FROM pelanggan");
+?>
+
+<style>
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.btn {
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+}
+.btn-tambah {
+    background: #27ae60;
+}
+.btn-edit {
+    background: #2980b9;
+}
+.btn-hapus {
+    background: #e74c3c;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+th {
+    background: #f8f8f8;
+}
+</style>
+
+<div class="card">
+    <div class="card-header">
+        <h3>List Pelanggan</h3>
+        <a href="dashboard.php?page=tambah-customer" class="btn btn-tambah">+ Tambah Pelanggan</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Kode</th>
+            <th>Nama Pelanggan</th>
+            <th>Kategori</th>
+            <th>alamat</th>
+            <th>no_hp</th>
+            <th>email</th>
+        </tr>
+
+        <?php
+        $no = 1;
+        while ($row = mysqli_fetch_assoc($data)) {
+        ?>
+        <tr>
+            <td><?= $no++; ?></td>
+            <td><?= $row['kode_pelanggan']; ?></td>
+            <td><?= $row['nama_pelanggan']; ?></td>
+            <td><?= $row['alamat']; ?></td>
+            <td><?= $row['no_hp']; ?></td>
+            <td><?= $row['email']; ?></td>
+            <td>
+                <a href="dashboard.php?page=edit-customer&id=<?= $row['id_pelanggan']; ?>" class="btn btn-edit">Edit</a>
+                <a href="dashboard.php?page=hapus-customer&id=<?= $row['id_pelanggan']; ?>"
+                   class="btn btn-hapus"
+                   onclick="return confirm('Yakin hapus data?')">
+                   Hapus
+                </a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+</div>
